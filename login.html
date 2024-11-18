@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar System Login</title>
+    <title>Solar System</title>
     <style>
         body {
             margin: 0;
@@ -88,10 +88,19 @@
         <div class="planet"></div>
     </div>
     <div class="login-box">
-        <h1>Solar Login</h1>
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password" >
-        <a href="index.html"><button>Login</button></a>
+        <h1>النظام الشمسي</h1>
+        <form id="loginForm">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit">دخول</button>
+        </form>
     </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            window.location.href = 'index.html'; 
+        });
+    </script>
 </body>
 </html>
