@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Login</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .solar-system {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 3px dashed rgba(255, 255, 255, 0.2);
+            animation: spin 10s linear infinite;
+        }
+        .sun {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: yellow;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .planet {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: blue;
+            border-radius: 50%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: orbit 10s linear infinite;
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes orbit {
+            from {
+                transform: rotate(0deg) translateX(130px);
+            }
+            to {
+                transform: rotate(360deg) translateX(130px);
+            }
+        }
+        .login-box {
+            z-index: 1;
+            text-align: center;
+        }
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background: yellow;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="solar-system">
+        <div class="sun"></div>
+        <div class="planet"></div>
+    </div>
+    <div class="login-box">
+        <h1>Solar Login</h1>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password" >
+        <a href="index.html"><button>Login</button></a>
+    </div>
+</body>
+</html>
